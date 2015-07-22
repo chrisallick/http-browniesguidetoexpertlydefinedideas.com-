@@ -1,0 +1,94 @@
+html, body { width: 100%; height: 100%; background: #EFF0EC; }
+
+@font-face { font-family: larishneuesemibold; src: url("../font/LarishNeueSemiboldRegular.otf"); }
+
+#bordertop, #borderbottom, #borderleft, #borderright { background: url("../img/border.jpg") top left repeat; position: fixed; z-index: 1000; }
+#borderleft, #borderright { top: 0; bottom: 0; width: 15px; }
+#borderleft { left: 0; }
+#borderright { right: 0; }
+#bordertop, #borderbottom { left: 0; right: 0; height: 15px; }
+#bordertop { top: 0; }
+#borderbottom { bottom: 0; }
+
+#gallery { width: 80%; height: 80%; position: absolute; z-index: 10000; display: none; }
+#gallery.on { display: block; }
+#gallery .images { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; }
+#gallery .images .image { display: none; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 100000; background: #FFFFFF url("") no-repeat center center / cover; }
+#gallery .images .on { display: block; }
+#gallery .images .eight { background-image: url("../img/gallery_image_eight.jpg"); }
+
+/*#gallery .images .one { background-image: url("../img/gallery_image_one.jpg"); }*/
+/*#gallery .images .one { background-image: url("../img/gallery_image_one.jpg"); }*/
+/*#gallery .images .two { background-image: url("../img/gallery_image_two.jpg"); }*/
+/*#gallery .images .three { background-image: url("../img/gallery_image_three.jpg"); }*/
+/*#gallery .images .four { background-image: url("../img/gallery_image_four.jpg"); }*/
+/*#gallery .images .five { background-image: url("../img/gallery_image_five.jpg"); }*/
+/*#gallery .images .six { background-image: url("../img/gallery_image_six.jpg"); }*/
+/*#gallery .images .seven { background-image: url("../img/gallery_image_seven.jpg"); }*/
+
+#gallery .close { z-index: 100001; position: absolute; top: 0px; right: 0px; width: 36px; height: 36px; background: url("../img/close_gallery.png") top left no-repeat; background-size: 100%; cursor: pointer; }
+#gallery .next { z-index: 100001; position: absolute; top: calc(50% - 23px); right: 33px; width: 24px; height: 47px; background: url("../img/next_gallery.png") top left no-repeat; background-size: 100%; cursor: pointer; }
+#gallery .prev { z-index: 100001; position: absolute; top: calc(50% - 23px); left: 33px; width: 24px; height: 47px; background: url("../img/prev_gallery.png") top left no-repeat; background-size: 100%; cursor: pointer; }
+
+#wrapper { width: 1150px; height: 96%; /*min-height: 605px;*/ opacity: 0; position: relative; margin: 0 auto; }
+#wrapper .two-column { /*height: 85%;*/ position: relative; /*top: 20%;*/ }
+
+#social { position: absolute; top: 40px; right: 40px; z-index: 100; width: 65px; height: 28px; }
+#social .facebook { float: left; display: block; width: 28px; height: 28px; background: url("../img/social_facebook.png") top left no-repeat; background-position: 0px 0px; background-size: 200%; }
+#social .facebook:hover { background-position: -28px 0px; }
+#social .twitter { float: right; display: block; width: 28px; height: 28px; background: url("../img/social_twitter.png") top left no-repeat; background-position: 0px 0px; background-size: 200%; }
+#social .twitter:hover { background-position: -28px 0px; }
+
+#left { width: 42%; float: left; position: relative; }
+#left .logo { margin-bottom: 22px; width: 260px; }
+#left .logo .overlay { width: 198px; height: 233px; position: absolute; top: 80px; left: 270px; background: url("../img/overlay_left_logo.png") top left no-repeat; background-size: 100%; display: none; }
+#left .logo:hover .overlay { display: block; }
+#left .logo .logotype { width: 192px; height: 236px; padding: 40px 0px 0px 40px; cursor: pointer; }
+
+#left h2 { color: black; font: normal 15px larishneuesemibold; width: 220px; margin-bottom: 16px; padding: 0px 0px 0px 40px; line-height: 18px; }
+#left p { color: #231f20; font: normal 10px larishneuesemibold; width: 393px; margin-bottom: 16px; padding: 0px 0px 0px 40px; line-height: 18px; letter-spacing: .5pt; }
+#left p.datedoe { background: url("../img/datedoe.png") top left no-repeat; background-size: 52px 58px; margin: 0px 0px 14px 40px; padding: 0px 0px 11px 57px; background-position: 0px 6px; width: 287px; }
+#left p.alt { color: #17512b; font-size: 15px; margin-bottom: 18px; }
+
+#left .copy .overlay { width: 198px; height: 233px; position: absolute; top: 202px; left: 280px; background: url("../img/overlay_left_copy.png") top left no-repeat; background-size: 100%; display: none; }
+#left .copy:hover .overlay { display: block; }
+
+#buttons { width: 282px; height: 38px; padding-top: 10px; position: relative; }
+#buttons .overlay { width: 198px; height: 233px; position: absolute; top: -170px; right: -250px; background: url("../img/overlay_left_buybutton.png") top left no-repeat; background-size: 100%; display: none; }
+#buttons:hover .overlay { display: block; }
+#buttons .buy { background: #17502C; width: 243px; height: 38px; display: block; box-sizing: border-box; padding: 11px 0px 0px 0px; color: white; text-align: center; margin: 0px 0px 0px 40px; font: normal 17px larishneuesemibold; }
+
+#right { width: 49%; float: right; position: relative; margin-top: 43px; padding-left: 60px; }
+#right .book { display: block; width: 90%; padding-left: 50px; }
+#right .viewmore { display: block; width: 142px; height: 38px; background: url("../img/viewmore.png") top left no-repeat; background-size: 142px 38px; position: relative; bottom: 34px; left: 140px; background-size: 200%; }
+#right .viewmore:hover { background-position: -142px 0px; }
+
+#right .overlay { width: 215px; height: 233px; position: absolute; top: 102px; left: -135px; background: url("../img/overlay_right_book.png") top left no-repeat; background-size: 100%; display: none; }
+#right:hover .overlay { display: block; }
+
+#bottom { position: absolute; bottom: 5px; left: calc(50% - 30px); width: 60px; height: 51px; }
+#bottom .logolink { display:block; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 100; }
+
+#bottom .logo-wrapper { cursor: pointer; width: 60px; height: 51px; position: absolute; top: 0px; left: 0px; }
+#bottom .logo-wrapper .logotop { width: 60px; height: 38px; background: url("../img/logo_top.png") top left no-repeat; background-size: 100%; position: relative; }
+#bottom .logo-wrapper .logobottom { width: 60px; height: 13px; background: url("../img/logo_bottom.png") top left no-repeat; background-size: 100%; }
+#bottom:hover .logo-wrapper .logotop { 
+    -webkit-animation: bounce .8s infinite ease-in-out;
+    -moz-animation: bounce .8s infinite linear;
+    -o-animation: bounce .8s infinite linear;
+    animation: bounce .8s infinite linear;
+}
+
+@-webkit-keyframes bounce {
+    0%   { top: 0px; }
+    50%   { top: -4px; }
+    100% { top: 0px; }
+}
+
+#bottom .overlay { width: 178px; height: 252px; position: absolute; top: -270px; left: calc(50% - 85px); background: url("../img/overlay_bottom_logo.png") top left no-repeat; background-size: 100%; display: none; }
+#bottom:hover .overlay { display: block; }
+
+
+
+
+
